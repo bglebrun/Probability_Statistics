@@ -30,7 +30,10 @@ summary(CO2)
 
 ### Problem 6
 Boxplot of Candies data
-![](B:\Users\Ben\Development\Probability_statistics\0-verification_assignment\candies.png)
+```{r}
+candy = read.csv("B:\\Users\\Ben\\Development\\Probability_statistics\\0-verification_assignment\\candy.csv")
+boxplot(TotalNumCandies~Size, main="Boxplot of Candies", xlab="Cup Size", ylab="Candies", data=candy)
+```
 
 ### Problem 7
 Verification of the M381 package installation
