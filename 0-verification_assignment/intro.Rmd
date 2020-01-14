@@ -1,0 +1,45 @@
+---
+title: "Intro to R assignment - Math 381"
+author: "Benjamin LeBrun"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+### Problem 1
+Find the solution for $tan(3) + 3 * 8^3 - \pi$
+
+```{r}
+tan(3)+3*8^3-pi
+```
+### Problem 2 - 4
+```{r}
+x = c(1,3,4)
+y = c(-2,4,8)
+
+x * y
+# This is a dot product
+sum(x*y)
+```
+### Problem 5ish
+Numerical summary of the CO2 dataset
+```{r}
+summary(CO2)
+```
+
+### Problem 6
+Boxplot of Candies data
+![](B:\Users\Ben\Development\Probability_statistics\0-verification_assignment\candies.png)
+
+### Problem 7
+Verification of the M381 package installation
+
+```{r}
+library(M381)
+onedie(100)
+```
+
+### Problem 8
+Selfie time
+![](C:\Users\Ben L\Pictures\cool_dude_selfie.jpg)
