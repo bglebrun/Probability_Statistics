@@ -22,7 +22,7 @@ x * y
 # This is a dot product
 sum(x*y)
 ```
-### Problem 5ish
+### Problem 5
 Numerical summary of the CO2 dataset
 ```{r}
 summary(CO2)
@@ -30,7 +30,10 @@ summary(CO2)
 
 ### Problem 6
 Boxplot of Candies data
-![](B:\Users\Ben\Development\Probability_statistics\0-verification_assignment\candies.png)
+```{r}
+candy = read.csv(".//candy.csv", header=TRUE)
+boxplot(TotalNumCandies~Size,data=candy,xlab="Cup Size", ylab="Candies",main="Boxplot of Candies")
+```
 
 ### Problem 7
 Verification of the M381 package installation
@@ -42,4 +45,4 @@ onedie(100)
 
 ### Problem 8
 Selfie time
-![](C:\Users\Ben L\Pictures\cool_dude_selfie.jpg)
+<!-- ![](C:\Users\Ben L\Pictures\cool_dude_selfie.jpg) -->
