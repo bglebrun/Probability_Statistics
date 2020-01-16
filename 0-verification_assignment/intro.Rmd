@@ -45,4 +45,4 @@ onedie(100)
 
 ### Problem 8
 Selfie time
-![](C:\Users\Ben L\Pictures\cool_dude_selfie.jpg)
+![](.\cool_dude_selfie.jpg)
