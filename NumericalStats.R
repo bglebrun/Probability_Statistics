@@ -16,7 +16,7 @@ mean(TotalNumCandies)
 # Q3 (3rd quartile), 75% of the data is below
 
 # p% * (n+1) --> this gives you the position, not the value
-# i.e. median position = 0.5*(n+1) 
+# i.e. median position = 0.5*(n+1)
 
 n <- length(TotalNumCandies) # Sample size
 sort.Total <- sort(TotalNumCandies)
@@ -35,8 +35,8 @@ favstats(TotalNumCandies)  # from the mosaic package
 # Qualitative Variables
 table(Gender)
 table(Size)
-favstats(TotalNumCandies~Size)
-favstats(TotalNumCandies~Gender)
+favstats(TotalNumCandies ~ Size)
+favstats(TotalNumCandies ~ Gender)
 
 # Spread of Data
 range(TotalNumCandies)
