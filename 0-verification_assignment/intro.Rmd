@@ -31,7 +31,7 @@ summary(CO2)
 ### Problem 6
 Boxplot of Candies data
 ```{r}
-candy = read.csv(".//candy.csv", header=TRUE)
+candy = read.csv("..//Data//candy.csv", header=TRUE)
 boxplot(TotalNumCandies~Size,data=candy,xlab="Cup Size", ylab="Candies",main="Boxplot of Candies")
 ```
 
@@ -45,4 +45,4 @@ onedie(100)
 
 ### Problem 8
 Selfie time
-![](.\cool_dude_selfie.jpg)
+![](..//Data//cool_dude_selfie.jpg)
