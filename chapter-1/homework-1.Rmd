@@ -1,0 +1,169 @@
+---
+title: "Homework 1 - Math 381"
+author: "Benjamin LeBrun"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Problem 1.1.2
+If you wanted to estimate the mean height of all the students at a university, which one of the following sampling strategies would be best? Why? Note that none of the methods are true simple random samples.
+1. Measure the heights of 50 students found in the gym during basketball intramurals.
+2. Measure the heights of all engineering majors.
+3. Measure the heights of the students selected by choosing the first name on each page of the campus phone book.
+
+#### Solution
+For a random sample of heights for a university, it would probably be best to use the third method for sampling. As the first two options aren't a proper representation of the entire population as a whole (one is limited to athletes, the other to a single department in the school), the third would be the most likely to yield a more representative sample of the population of a university.
+
+### Problem 1.1.4
+A sample of 100 college students is selected from all students registered at a certain college, and it turns out that 38 of them participate in intramural sports. True or false:
+1. The proportion of students at this college who participate in intramural sports is 0.38.
+2. The proportion of students at this college who participate in intramural sports is likely to be close to 0.38, but not equal to 0.38.
+
+#### Solution
+The second is true and the first is false, as we are estimating from a smaller population the likelihood a student out of 100 selected students would be in intramural sports. The accuracy of that estimation also relies on items like sample size and sample variation if we were to take another sample of 100 students, it would be very likely to produce a number close to 0.38, but not exact.
+
+### Problem 1.1.8
+A medical researcher wants to determine whether exercising can lower blood pressure. At a health fair, he measures the blood pressure of 100 individuals, and interviews them about their exercise habits. He divides the individuals into two categories: those whose typical level of exercise is low, and those whose level of exercise is high.
+1. Is this a controlled experiment or an observational study?
+2. The subjects in the low exercise group had considerably higher blood pressure, on the average, than subjects in the high exercise group. The researcher concludes that exercise decreases blood pressure. Is this conclusion well-justified? Explain.
+
+#### Solution
+This is an observational study, since the researcher is simply observing the levels as they are, and not conducting a controlled study which would need design and control from the researcher to attempt to isolate as many factors as possible to find the best possible reading of their hypothesis.
+
+The researcher's conclusion could be well justified, however, observational studies are not conclusive and reliable to create or study cause and effect hypothesis. The researcher would probably consider doing a controlled experiment on the factors of exercise and blood pressure.
+
+### Problem 1.2.2
+Is the sample mean always the most frequently occurring value? If so, explain why. If not, give an example.
+
+#### Solution
+No, the most frequently occuring value is called the mode. Let [1, 1, 1, 10, 11, 12] be a sample of data, the mode is 1, the sample mean however is 6, therefore the mode and sample mean are not the same value.
+
+### Problem 1.2.6
+For a list of positive numbers, is it possible for the standard deviation to be greater than the mean? If so, give an example. If not, explain why not.
+
+#### Solution
+Yes, since mean is the average of all the numbers together and standard deviation is simply the degree to which the data is distributed.
+
+Let [1, 1, 2, 8, 9]:
+
+```{R}
+sample <- c(1, 1, 1, 2, 8, 9)
+mean(sample)
+# Standard deviation
+sd(sample)
+```
+
+As calculated above in the R example, the standard deviation of the example dataset is larger than the mean.
+
+### Problem 1.2.8
+In a certain company, every worker received a $50-per-week raise. How does this affect the mean salary? The standard deviation of the salaries?
+
+#### Solution
+The standard deviation is constant, since it is simply a measure of the spread of data and is prone to changes of origin but not scale. The mean however will rise with the salary increase.
+
+### Problem 1.3.2
+Forty-five specimens of a certain type of powder were analyzed for sulfur trioxide content. Following are the results, in percent. The list has been sorted into numerical order
+14.1 	14.4 	14.7 	14.8 	15.3 	15.6 	16.1 	16.6 	17.3
+14.2 	14.4 	14.7 	14.9 	15.3 	15.7 	16.2 	17.2 	17.3
+14.3 	14.4 	14.8 	15.0 	15.4 	15.7 	16.4 	17.2 	17.8
+14.3 	14.4 	14.8 	15.0 	15.4 	15.9 	16.4 	17.2 	21.9
+14.3 	14.6 	14.8 	15.2 	15.5 	15.9 	16.5 	17.2 	22.4
+
+1. Construct a stem-and-leaf plot for these data.
+2. Construct a histogram for these data.
+3. Construct a dotplot for these data.
+4. Construct a boxplot for these data. Does the box-plot show any outliers?
+
+#### Solution
+```{R}
+data <- c(14.1, 14.4, 14.7, 14.8, 15.3, 15.6, 16.1, 16.6, 17.3, 14.2, 14.4, 14.7, 14.9, 15.3, 15.7, 16.2, 17.2, 17.3, 14.3, 14.4, 14.8, 15.0, 15.4, 15.7, 16.4, 17.2, 17.8, 14.3, 14.4, 14.8, 15.0, 15.4, 15.9, 16.4, 17.2, 21.9, 14.3, 14.6, 14.8, 15.2, 15.5, 15.9, 16.5, 17.2, 22.4)
+# Stem and leaf plot
+stem(data)
+# Histogram
+hist(data)
+# Dot plot
+dotchart(data)
+# Box plot
+boxplot(data)
+```
+
+The boxplot of this set of data indicates two outliers.
+
+### Problem 1.3.4
+Following are measurements of soil concentrations (in mg/kg) of chromium (Cr) and nickel (Ni) at 20 sites in the area of Cleveland, Ohio. These data are taken from the article “Variation in North American Regulatory Guidance for Heavy Metal Surface Soil Contamination at Commercial and Industrial Sites” (A. Jennings and J. Ma, J Environment Eng, 2007:587–609).
+Cr: 	34 	1 	511 	2 	574 	496 	322 	424
+	269 	140 	244 	252 	76 	108 	24 	38
+	18 	34 	30 	191 				
+Ni: 	23 	22 	55 	39 	283 	34 	159 	37
+	61 	34 	163 	140 	32 	23 	54 	837
+	64 	354 	376 	471 				
+
+1. Construct a histogram for each set of concentrations.
+2. Construct comparative boxplots for the two sets of concentrations.
+3. Using the boxplots, what differences can be seen between the two sets of concentrations?
+
+#### Solution
+```{R}
+cr <- c(34, 1, 511, 2, 574, 496, 322, 424, 269, 140, 244, 252, 76, 108, 24, 38, 18, 34, 30, 191)
+ni <- c(23, 22, 55, 39, 283, 34, 159, 37, 61, 34, 163, 140, 32, 23, 54, 837, 64, 354, 376, 471)
+# Chromium boxplot
+boxplot(cr)
+# Nickle boxplot
+boxplot(ni)
+```
+
+Chromium seems to have not just a higher median, but also a higher average spread and standard deviation than the nickle data. However, nickle does have one outlier from the rest of the measured data. The means are also generally skewed the same however to lower concentrations of the whole.
+
+### Problem 1.3.12
+Which of the following statistics cannot be determined from a boxplot?
+1. The median
+2. The mean
+3. The first quartile
+4. The third quartile
+5. The interquartile range
+
+
+#### Solution
+The mean cannot be determined from a boxplot.
+
+### Problem 1.3.16
+Match each histogram to the boxplot that represents the same data set.
+![](..//Data//prob-16.png)
+
+#### Solution
+1 - C
+2 - B
+3 - D
+4 - A
+
+### Problem 1.3.18
+Refer to Exercise 5. Construct a back-to-back stem-and-leaf plot by constructing a list of stems, then write the yields for Catalyst A to the right and the yields for Catalyst B to the left. Using this plot, what differences can be seen between the results of the yields of the two catalysts?
+
+Catalyst A
+4.4 	3.4 	2.6 	3.8
+4.9 	4.6 	5.2 	4.7
+4.1 	2.6 	6.7 	4.1
+3.6 	2.9 	2.6 	4.0
+4.3 	3.9 	4.8 	4.5
+4.4 	3.1 	5.7 	4.5
+
+Catalyst B
+3.4 	1.1 	2.9 	5.5
+6.4 	5.0 	5.8 	2.5
+3.7 	3.8 	3.1 	1.6
+3.5 	5.9 	6.7 	5.2
+6.3 	2.6 	4.3 	3.8
+
+
+#### Solution
+```{R}
+a <- c(4.4, 3.4, 2.6, 3.8, 4.9, 4.6, 5.2, 4.7, 4.1, 2.6, 6.7, 4.1, 3.6, 2.9, 2.6, 4.0, 4.3, 3.9, 4.8, 4.5, 4.4, 3.1, 5.7, 4.5)
+b <- c(3.4, 1.1, 2.9, 5.5, 6.4, 5.0, 5.8, 2.5, 3.7, 3.8, 3.1, 1.6, 3.5, 5.9, 6.7, 5.2, 6.3, 2.6, 4.3, 3.8)
+stem(a)
+stem(b)
+```
+
+Catalyst A seems to have more concentrated values on the 4 stem, which leads me to suspect that A might have a lower standard deviation than Catalyst B, Catalyst B however seems to be more skewed to higher data points than Catalyst A, which is heavily skewed bottom with only three datapoints above the 40-49 range.
